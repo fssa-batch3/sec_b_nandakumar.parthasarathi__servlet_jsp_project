@@ -1,0 +1,87 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>findAllUsersServlet</servlet-name>
+  	<display-name>findAllUsersServlet</display-name>
+  	<description></description>
+  	<servlet-class>in.fssa.mynotesweb.servlets.findAllUsersServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>getAllTasks</servlet-name>
+  	<display-name>getAllTasks</display-name>
+  	<description></description>
+  	<servlet-class>in.fssa.mynotesweb.servlets.getAllTasks</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>GetAllTasksServlet</servlet-name>
+  	<display-name>GetAllTasksServlet</display-name>
+  	<description></description>
+  	<servlet-class>in.fssa.mynotesweb.servlets.GetAllTasksServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CreateTaskServlet</servlet-name>
+  	<display-name>CreateTaskServlet</display-name>
+  	<description></description>
+  	<servlet-class>in.fssa.mynotesweb.servlets.CreateTaskServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CreateTasksServlet</servlet-name>
+  	<display-name>CreateTasksServlet</display-name>
+  	<description></description>
+  	<servlet-class>in.fssa.mynotesweb.servlets.CreateTasksServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>NewTaskServlet</servlet-name>
+  	<display-name>NewTaskServlet</display-name>
+  	<description></description>
+  	<servlet-class>in.fssa.mynotesweb.servlets.NewTaskServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateTaskServlet</servlet-name>
+  	<display-name>UpdateTaskServlet</display-name>
+  	<description></description>
+  	<servlet-class>in.fssa.mynotesweb.servlets.UpdateTaskServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteTaskServlet</servlet-name>
+  	<display-name>DeleteTaskServlet</display-name>
+  	<description></description>
+  	<servlet-class>in.fssa.mynotesweb.servlets.DeleteTaskServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>findAllUsersServlet</servlet-name>
+  	<url-pattern>/findAllUsersServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>getAllTasks</servlet-name>
+  	<url-pattern>/getAllTasks</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GetAllTasksServlet</servlet-name>
+  	<url-pattern>/GetAllTasksServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CreateTaskServlet</servlet-name>
+  	<url-pattern>/CreateTaskServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CreateTasksServlet</servlet-name>
+  	<url-pattern>/CreateTasksServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>NewTaskServlet</servlet-name>
+  	<url-pattern>/NewTaskServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateTaskServlet</servlet-name>
+  	<url-pattern>/UpdateTaskServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteTaskServlet</servlet-name>
+  	<url-pattern>/DeleteTaskServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
