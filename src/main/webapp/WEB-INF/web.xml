@@ -94,6 +94,54 @@
   	<description></description>
   	<servlet-class>in.fssa.mynotesweb.servlets.NewDeleteTaskServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ResisterServlet</servlet-name>
+  	<display-name>ResisterServlet</display-name>
+  	<description></description>
+  	<servlet-class>in.fssa.mynotesweb.servlets.ResisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>NewCreateUserServlet</servlet-name>
+  	<display-name>NewCreateUserServlet</display-name>
+  	<description></description>
+  	<servlet-class>in.fssa.mynotesweb.servlets.NewCreateUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RegisterServlet</servlet-name>
+  	<display-name>RegisterServlet</display-name>
+  	<description></description>
+  	<servlet-class>in.fssa.mynotesweb.servlets.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CreateUserTask</servlet-name>
+  	<display-name>CreateUserTask</display-name>
+  	<description></description>
+  	<servlet-class>in.fssa.mynotesweb.servlets.CreateUserTask</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CreateNewUserServlet</servlet-name>
+  	<display-name>CreateNewUserServlet</display-name>
+  	<description></description>
+  	<servlet-class>in.fssa.mynotesweb.servlets.CreateUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<display-name>LoginServlet</display-name>
+  	<description></description>
+  	<servlet-class>in.fssa.mynotesweb.servlets.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LogoutSevlet</servlet-name>
+  	<display-name>LogoutSevlet</display-name>
+  	<description></description>
+  	<servlet-class>in.fssa.mynotesweb.servlets.LogoutSevlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>HomeServlet</servlet-name>
+  	<display-name>HomeServlet</display-name>
+  	<description></description>
+  	<servlet-class>in.fssa.mynotesweb.servlets.HomeServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>findAllUsersServlet</servlet-name>
   	<url-pattern>/findAllUsersServlet</url-pattern>
@@ -153,5 +201,37 @@
   <servlet-mapping>
   	<servlet-name>NewDeleteTaskServlet</servlet-name>
   	<url-pattern>/NewDeleteTaskServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ResisterServlet</servlet-name>
+  	<url-pattern>/ResisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>NewCreateUserServlet</servlet-name>
+  	<url-pattern>/NewCreateUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RegisterServlet</servlet-name>
+  	<url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CreateUserTask</servlet-name>
+  	<url-pattern>/CreateUserTask</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CreateNewUserServlet</servlet-name>
+  	<url-pattern>/CreateNewUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogoutSevlet</servlet-name>
+  	<url-pattern>/LogoutSevlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>HomeServlet</servlet-name>
+  	<url-pattern>/HomeServlet</url-pattern>
   </servlet-mapping>
 </web-app>

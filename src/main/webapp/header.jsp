@@ -1,9 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Index</title>
-<style>
-/* Reset some default styles */
+<meta charset="ISO-8859-1">
+<title>Header</title>
+<style type="text/css">
 body, h1, ul, li {
 	margin: 0;
 	padding: 0;
@@ -70,11 +72,39 @@ nav a:hover {
 </style>
 </head>
 <body>
-	
-	<jsp:include page="header.jsp"></jsp:include>
-	
-	
 
-	<!-- The rest of your content goes here -->
+	<%
+	String loggedEmail = (String) request.getSession().getAttribute("loggedEmail");
+	System.out.println(loggedEmail);
+	%>
+
+	<%
+	if (loggedEmail == null) {
+	%>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.jsp">Home</a></li>
+				<li><a href="login.jsp" class="sign-in-button">Login</a></li>
+			</ul>
+		</nav>
+	</header>
+	<%
+	} else {
+	%>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.jsp">Home</a></li>
+				<li><a href="tasks">List all tasks</a></li>
+				<li><a href="tasks/new">Create tasks</a></li>
+				<li><a href="logout" class="sign-in-button">Logout</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<%
+	}
+	%>
 </body>
 </html>

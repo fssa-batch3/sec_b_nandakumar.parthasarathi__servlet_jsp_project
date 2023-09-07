@@ -10,33 +10,51 @@
 <head>
 <meta charset="UTF-8">
 <title>ListAllTask</title>
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
+	rel="stylesheet">
 <style>
 body {
-	font-family: Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
+	background-color: #f7f7f7;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat', sans-serif;
+	color: #333;
 }
 
 table {
-	width: 70%;
-	margin: 20px auto;
+	width: 100%;
+	margin: 20px 0;
 	text-align: center;
 	border-collapse: collapse;
+	background-color: white;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 th, td {
 	border: 1px solid #dddddd;
-	padding: 8px;
+	padding: 10px;
 }
 
 th {
 	background-color: #f2f2f2;
 }
 
-.edit-btn, .view-btn, .delete-btn {
-	padding: 5px 10px;
+.edit-btn, .view-btn, .delete-btn, .add-btn {
+	padding: 5px 20px;
 	cursor: pointer;
 	border: none;
-	outline: none;
-	border-radius: 3px;
+	border-radius: 5px;
 	font-weight: bold;
 	transition: background-color 0.3s, color 0.3s;
 	text-decoration: none; /* Remove underlines from anchor tags */
@@ -60,6 +78,18 @@ th {
 	margin-right: 5px;
 }
 
+.add-btn {
+	background-color: #4CAF50; /* Green color */
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+	text-decoration: none;
+	margin-bottom: 20px;
+}
+
 .edit-btn:hover {
 	background-color: #2980b9;
 }
@@ -72,44 +102,57 @@ th {
 	background-color: #c0392b;
 }
 
+.add-btn:hover {
+	background-color: #45a049; /* Darker green on hover */
+}
+
 table tr:hover {
 	background-color: #f5f5f5;
 }
-
-/* Add your old CSS styles here */
 </style>
+
 </head>
 <body>
-<%
-    Set<Tasks> taskList = (Set<Tasks>) request.getAttribute("taskList");
-%>
-<a href="<%= request.getContextPath() %>/tasks/new"><button type="button" class="add-btn">Add New Task</button></a>
 
-<table>
-    <tr>
-        <th>ID</th>
-        <th>Task Name</th>
-        <th>Task Description</th>
-        <th>Task Status</th>
-        <th>Edit</th>
-        <th>Delete</th>
-        <th>View</th>
-    </tr>
-    <%
-    for (Tasks task : taskList) {
-    %>
-    <tr>
-        <td><%= task.getId() %></td>
-        <td><%= task.getName() %></td>
-        <td><%= task.getDescription() %></td>
-        <td><%= task.getStatus() %></td>
-        <td><a class="edit-btn" href="<%= request.getContextPath() %>/tasks/edit?id=<%= task.getId() %>">Edit</a></td>
-        <td><a class="delete-btn" href="<%= request.getContextPath() %>/tasks/newDeleteTask?taskId=<%= task.getId() %>">Delete</a></td>
-        <td><a class="view-btn" href="<%= request.getContextPath() %>/tasks/view?id=<%= task.getId() %>">View</a></td>
-    </tr>
-    <%
-    }
-    %>
-</table>
+
+	<jsp:include page="header.jsp"></jsp:include>
+
+
+	<%
+	Set<Tasks> taskList = (Set<Tasks>) request.getAttribute("taskList");
+	%>
+	
+
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Task Name</th>
+			<th>Task Description</th>
+			<th>Task Status</th>
+			<th>Edit</th>
+			<th>Delete</th>
+			<th>View</th>
+		</tr>
+		<%
+		for (Tasks task : taskList) {
+		%>
+		<tr>
+			<td><%=task.getId()%></td>
+			<td><%=task.getName()%></td>
+			<td><%=task.getDescription()%></td>
+			<td><%=task.getStatus()%></td>
+			<td><a class="edit-btn"
+				href="<%=request.getContextPath()%>/tasks/edit?id=<%=task.getId()%>">Edit</a></td>
+			<td><a class="delete-btn"
+				href="<%=request.getContextPath()%>/tasks/newDeleteTask?taskId=<%=task.getId()%>">Delete</a></td>
+			<td><a class="view-btn"
+				href="<%=request.getContextPath()%>/tasks/view?id=<%=task.getId()%>">View</a></td>
+		</tr>
+		<%
+		}
+		%>
+	</table>
+	<a href="<%=request.getContextPath()%>/tasks/new"><button
+			type="button" class="add-btn">Add New Task</button></a>
 </body>
 </html>

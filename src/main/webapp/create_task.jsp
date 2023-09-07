@@ -92,7 +92,7 @@ body {
 		<select id="status" name="status" required>
 		    <option value="Pending">Pending</option>
 		    <option value="Completed">Completed</option>
-		    <option value="In Progress"> In Progress</option>
+		    <option value="Progress"> In Progress</option>
 		</select>
 		
 		<button type="submit">Add</button>
