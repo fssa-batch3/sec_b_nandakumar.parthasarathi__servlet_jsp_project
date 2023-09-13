@@ -8,101 +8,111 @@
 <title>Update Task</title>
 <style>
 body {
-	font-family: Arial, sans-serif;
-	background-color: #f5f5f5;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: #ffffff;
-	border: 1px solid #e1e1e1;
-	border-radius: 5px;
-	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-	padding: 20px;
-	width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 60%;
+    max-width: 500px;
+    text-align: center;
 }
 
 h1 {
-	color: #3498db;
-	margin-bottom: 20px;
+    color: #3498db;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 label {
-	display: block;
-	margin-bottom: 10px;
-	font-weight: bold;
-	color: #333;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
 }
 
-input[type="text"], textarea, select {
-	width: 100%;
-	padding: 10px;
-	margin-bottom: 20px;
-	border: 1px solid #e1e1e1;
-	border-radius: 5px;
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    outline: none;
 }
 
 select {
-	background-color: #f9f9f9;
+    background-color: #f5f5f5;
 }
 
 .status-container {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .status-container select {
-	width: 60%;
+    width: 60%;
 }
 
 button {
-	background-color: #3498db;
-	color: white;
-	border: none;
-	border-radius: 5px;
-	padding: 10px 15px;
-	width: 100%;
-	cursor: pointer;
-	font-weight: bold;
-	transition: background-color 0.3s;
+    background-color: #27ae60; /* Green button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
 }
 
 button:hover {
-	background-color: #2980b9;
+    background-color: #219a52; /* Darker green on hover */
 }
 
 .back-button {
-	background-color: #ccc;
-	color: #333;
-	border: none;
-	border-radius: 5px;
-	padding: 10px 15px;
-	margin-top: 20px;
-	text-decoration: none;
-	cursor: pointer;
-	font-weight: bold;
-	transition: background-color 0.3s;
-	text-align: center;
-	width: 100%;
+    background-color: #007bff; /* Blue button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px; /* Decreased margin-top */
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 50%; /* Decreased width */
 }
 
 .back-button:hover {
-	background-color: #999;
-	color: #fff;
+    background-color: #0056b3; /* Darker blue on hover */
 }
+
 </style>
 </head>
 <body>
+
+
 	<div class="container">
 		<%
 		Tasks task = (Tasks) request.getAttribute("task");

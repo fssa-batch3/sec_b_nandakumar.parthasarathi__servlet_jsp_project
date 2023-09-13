@@ -6,67 +6,89 @@
     <title>Register</title>
     <style>
         /* Apply a basic reset to remove default padding and margins */
-        body, html, h1, form {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Set a background color for the body */
+        /* Global styles */
         body {
-            background-color: #f2f2f2;
             font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
         }
 
-        /* Style the container */
         .container {
             background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
             width: 400px;
-            margin: 0 auto;
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
         }
 
-        /* Style the form */
-        form {
-            display: flex;
-            flex-direction: column;
+        .container h1 {
+            color: #333;
+            margin-bottom: 20px;
         }
 
-        /* Style labels and input fields */
-        label {
-            font-weight: bold;
+        .container form {
+            text-align: left;
+        }
+
+        .container label {
+            display: block;
             margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
         }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
+        .container input[type="text"],
+        .container input[type="email"],
+        .container input[type="password"] {
+            width: 100%;
             padding: 10px;
             margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-
-        /* Style the submit button */
-        button[type="submit"] {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 15px;
             border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            border-radius: 5px;
+            background-color: #f8f8f8;
+            color: #333;
+            outline: none;
+            transition: background-color 0.3s;
         }
 
-        button[type="submit"]:hover {
-            background-color: #0056b3;
+        .container input[type="text"]:focus,
+        .container input[type="email"]:focus,
+        .container input[type="password"]:focus {
+            background-color: #e0e0e0;
+        }
+
+        .container button[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .container button[type="submit"]:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Register</h1>
+        <header>
+            <h1>Register</h1>
+        </header>
         <form action="<%= request.getContextPath()%>/user/create" method="post">
             <label for="username">User Name:</label>
             <input type="text" id="username" name="user_name" required>
@@ -76,7 +98,7 @@
             
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
-            
+
             <button type="submit">Register</button>
         </form>
     </div>

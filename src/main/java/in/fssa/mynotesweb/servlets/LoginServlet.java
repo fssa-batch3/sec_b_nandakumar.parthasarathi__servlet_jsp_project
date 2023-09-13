@@ -34,6 +34,7 @@ public class LoginServlet extends HttpServlet {
             userService.loginUser(email, password);
 
             session.setAttribute("loggedEmail", email); 
+            
             response.sendRedirect(request.getContextPath() + "/home");
 
         } catch (ServiceException | ValidationException e) {

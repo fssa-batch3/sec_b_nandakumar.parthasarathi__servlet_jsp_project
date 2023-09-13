@@ -6,44 +6,72 @@
     <meta charset="UTF-8">
     <title>Delete Task</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f3f3f3;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+    
+    
+    
+    
+    
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-        form {
-            width: 50%;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border: 1px solid #dddddd;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        }
 
-        h1 {
-            text-align: center;
-        }
+.container {
+    display: flex;
+    flex-direction: row; /* Display in a row */
+    justify-content: space-around; /* Add space between elements */
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 60%;
+    max-width: 500px;
+    text-align: center;
+}
 
-        button {
-            background-color: #e74c3c;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            width: 120px;
-            cursor: pointer;
-        }
+.container p {
+    text-align: left; /* Align text to the left */
+    flex: 1; /* Allow flex to adjust width */
+    margin: 0 10px; /* Add margin between elements */
+}
 
-        button:hover {
-            background-color: #c0392b;
-        }
+button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+a {
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #3498db;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+
     </style>
 </head>
 <body>

@@ -76,11 +76,15 @@ body {
 </style>
 </head>
 <body>
+      
+      
+      
+
+
 	<div class="container">
 		<h1>Create Task</h1>
 		<form action="create" method="post">
-			<!-- Updated action to match the servlet URL --><label for="user_id">User Id:</label>
-        <input type="text" name="user_id" placeholder="Enter User Id" required>
+			<!-- Updated action to match the servlet URL -->
 
 		<label for="task_name">Task Name:</label>
 		<input type="text" name="task_name" placeholder="Enter Task Name" required>
